@@ -22,6 +22,8 @@ Obviously there are other concerns in real world applications such as the line o
 4) Attempt to feed in a video stream and check to see if it can recognize a stop sign and the need to stop.
 
 ## Timetable
+(In addition to weekly meetings on saturday to check in)
+
 | Date                        | Goal/Task                                                                                                                                                                       |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 9/26                        | Finish up project proposal                                                                                                                                                      |
