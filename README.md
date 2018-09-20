@@ -17,8 +17,11 @@ Obviously there are other concerns in real world applications such as the line o
 
 ## Steps to Solution
 1) Get a dataset of images which include stop signs as well as no stop signs
+
 2) Pick and train different 2-class classification neural networks and test their accuracy to come up with the best solution.
+
 3) Recognize where the stop sign is in an image, and check how large it is.
+
 4) Attempt to feed in a video stream and check to see if it can recognize a stop sign and the need to stop.
 
 ## Timetable
