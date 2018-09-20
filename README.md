@@ -22,14 +22,14 @@ Obviously there are other concerns in real world applications such as the line o
 4) Attempt to feed in a video stream and check to see if it can recognize a stop sign and the need to stop.
 
 ## Timetable
-| Date        | Goal/Task           |
-| ------------- | -------------|
-| 9/26      | Finish up project proposal |
-| 10/6      | Have a dataset of images (Pictures with stop signs, pictures with no stop sign/different types of signs, random images) Start looking into libraries (tensorflow, opencv, etc.) |
-| 10/20 | Have some preliminary objection recognition (Everyone create a neural network and help one another and then compare to see which is most successful) |
-| 10/31 (Mid-term) | Be able to identify whether or not there is a stop sign in an image |
-| 11/15 | Catch up and complete stop sign recognition if incomplete, or add-on extra features (stop sign distance, etc.) Begin work on final presentation |
-| 12/1 (Presentation/Website) | Presentation & Website should be complete |
+| Date                        | Goal/Task                                                                                                                                                                       |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 9/26                        | Finish up project proposal                                                                                                                                                      |
+| 10/6                        | Have a dataset of images (Pictures with stop signs, pictures with no stop sign/different types of signs, random images) Start looking into libraries (tensorflow, opencv, etc.) |
+| 10/20                       | Have some preliminary objection recognition (Everyone create a neural network and help one another and then compare to see which is most successful)                            |
+| 10/31 (Mid-term)            | Be able to identify whether or not there is a stop sign in an image                                                                                                             |
+| 11/15                       | Catch up and complete stop sign recognition if incomplete, or add-on extra features (stop sign distance, etc.) Begin work on final presentation                                 |
+| 12/1 (Presentation/Website) | Presentation & Website should be complete                                                                                                                                       |
 
 ## Potential Resources
 Look into the following resources to potentially help with the object recognition
