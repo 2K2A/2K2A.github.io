@@ -2,13 +2,13 @@
 
 ## Members
 
-Albert Latham (latham2@wisc.edu) NetID: latham2
+Albert Latham (latham2@wisc.edu)
 
-Azhar Siddiqui (siddiqui4@wisc.edu) NetID: siddiqui4
+Azhar Siddiqui (siddiqui4@wisc.edu)
 
-Kendel Chopp (kchopp@wisc.edu) NetID: kchopp
+Kendel Chopp (kchopp@wisc.edu)
 
-Guk Kim (gkim95@gmail.com) NetID: gkim95
+Guk Kim (gkim95@gmail.com)
 
 ## Problem
 The problem we are hoping to solve is that of stop sign recognition. This has many real world applications such as autonomous driving, driving performance monitoring, and others. We hope to create some sort of system which can take in an image (or video stream) and recognize whether or not there is a stop sign. Time permitting, we would also like to be able to check how far away stop signs are by using their relative size in the image, that way we can see how urgently we must stop.
@@ -43,3 +43,6 @@ Look into the following resources to potentially help with the object recognitio
 - OpenCV (https://opencv.org/)
 - Keras (https://keras.io/)
 - Open Detection (http://opendetection.com/)
+- IEEE Trans. on Intel. Trans. (https://ieeexplore-ieee-org.ezproxy.library.wisc.edu/document/6352914)
+- Benchmarking Traffic Sign Recognition Algos. (https://www-sciencedirect-com.ezproxy.library.wisc.edu/science/article/pii/S0893608012000457)
+- Intl. Conf. on Intel. Sci. and Big Data Eng. (https://link-springer-com.ezproxy.library.wisc.edu/chapter/10.1007/978-3-319-23989-7_28)
