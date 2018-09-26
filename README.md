@@ -8,7 +8,7 @@ Azhar Siddiqui (siddiqui4@wisc.edu) NetID: siddiqui4
 
 Kendel Chopp (kchopp@wisc.edu) NetID: kchopp
 
-Guk Kim (gkim95@gmail.com)
+Guk Kim (gkim95@gmail.com) NetID: gkim95
 
 ## Problem
 The problem we are hoping to solve is that of stop sign recognition. This has many real world applications such as autonomous driving, driving performance monitoring, and others. We hope to create some sort of system which can take in an image (or video stream) and recognize whether or not there is a stop sign. Time permitting, we would also like to be able to check how far away stop signs are by using their relative size in the image, that way we can see how urgently we must stop.
