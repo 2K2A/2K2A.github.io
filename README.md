@@ -2,11 +2,11 @@
 
 ## Members
 
-Albert Latham (latham2@wisc.edu)
+Albert Latham (latham2@wisc.edu) NetID: latham2
 
-Azhar Siddiqui (siddiqui4@wisc.edu)
+Azhar Siddiqui (siddiqui4@wisc.edu) NetID: siddiqui4
 
-Kendel Chopp (kchopp@wisc.edu)
+Kendel Chopp (kchopp@wisc.edu) NetID: kchopp
 
 Guk Kim (gkim95@gmail.com)
 
