@@ -92,7 +92,7 @@ Efficiency: Roughly 0.2 seconds/image varying depending on image size
 
 Our Test Set: 77.5% accuracy
 
-| True Positives | False Negaitves | False Positives | True Negatives |
+| True Positives | False Negatives | False Positives | True Negatives |
 |----------------|-----------------|-----------------|----------------|
 | 12             | 8               | 1               | 19             |
 
@@ -121,7 +121,7 @@ Efficiency: Roughly 0.8 seconds/image varying depending on image size
 
 Our Test Set: 40% accuracy (Low accuracy on this test, but much higher when the stop signs are farther away)
 
-| True Positives | False Negaitves | False Positives | True Negatives |
+| True Positives | False Negatives | False Positives | True Negatives |
 |----------------|-----------------|-----------------|----------------|
 | 5             | 15               | 9               | 11             |
 
@@ -144,7 +144,7 @@ Efficiency: Roughly 0.01 seconds/image varying depending on image size
 
 Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best individual test)
 
-| True Positives | False Negaitves | False Positives | True Negatives |
+| True Positives | False Negatives | False Positives | True Negatives |
 |----------------|-----------------|-----------------|----------------|
 | 14             | 6               | 2               | 18             |
 
@@ -167,10 +167,20 @@ Efficiency: Roughly 0.6 seconds/image with higher variability than the other tes
 
 Our Test Set: 77.5% accuracy
 
-| True Positives | False Negaitves | False Positives | True Negatives |
+| True Positives | False Negatives | False Positives | True Negatives |
 |----------------|-----------------|-----------------|----------------|
 | 11             | 9               | 0               | 20             |
 
-## Results
+## Overall Results
+Efficiency: Roughly 1.5 seconds/image
+
+Our Test Set: 82.5% accuracy
+
+| True Positives | False Negatives | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 15             | 5               | 2               | 18             |
 
 ## Future
+* Run the recognition on a lower resolution dashcam video to detect stop signs live (Will also need to speed up tests or remove tests that do not perform as well)
+* Use the size of the stop signs and perspectives to determine how far the car is from the stop sign
+* Use similar recognition tactics to detect other street signs
