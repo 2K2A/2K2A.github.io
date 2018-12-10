@@ -102,7 +102,74 @@ Original With Bounding Box            |  Template on top of red blob
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/good_box.jpg" alt="good_box" width="200"/>  |  <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/template_good_pair.jpg" alt="good_template" width="200"/>
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/bad_box.jpg" alt="bad_box" width="200"/>  |  <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/template_bad_pair.jpg" alt="bad_template" width="200"/>
 
+##### Test 2: SIFT/Feature Matching
+###### Source Code
+https://github.com/2K2A/final_matlab/blob/master/featureMatch.m
 
+###### How It's Done
+1) Step One
+2) Step Two
+3) ...
+
+###### Drawbacks
+* Wow this is an unfortunate drawback
+* Another terrible drawback
+* ...
+
+###### Results
+Efficiency: Roughly 0.8 seconds/image varying depending on image size
+
+Our Test Set: 40% accuracy (Low accuracy on this test, but much higher when the stop signs are farther away)
+
+| True Positives | False Negaitves | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 5             | 15               | 9               | 11             |
+
+##### Test 3: Ratio Scoring
+###### Source Code
+https://github.com/2K2A/final_matlab/blob/master/detectStop.m
+
+###### How It's Done
+1) Step One
+2) Step Two
+3) ...
+
+###### Drawbacks
+* Wow this is an unfortunate drawback
+* Another terrible drawback
+* ...
+
+###### Results
+Efficiency: Roughly 0.01 seconds/image varying depending on image size
+
+Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best individual test)
+
+| True Positives | False Negaitves | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 14             | 6               | 2               | 18             |
+
+##### Test 4: OCR (Character Recognition for 'STOP')
+###### Source Code
+https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
+
+###### How It's Done
+1) Step One
+2) Step Two
+3) ...
+
+###### Drawbacks
+* Wow this is an unfortunate drawback
+* Another terrible drawback
+* ...
+
+###### Results
+Efficiency: Roughly 0.6 seconds/image with higher variability than the other tests
+
+Our Test Set: 77.5% accuracy
+
+| True Positives | False Negaitves | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 11             | 9               | 0               | 20             |
 
 ## Results
 
