@@ -81,6 +81,8 @@ https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
 * "All Way" or "4 Way" sign additions on the bottom make it less accurate, but it is still usually pretty accurate
 * Other red objects touching the stop sign (e.g. a red flag hanging off of the stop sign becomes a part of the blob)
 ###### Results
+Efficiency: Roughly 0.2 seconds/image varying depending on image size
+
 Our Test Set: 77.5% accuracy
 
 | True Positives | False Negaitves | False Positives | True Negatives |
