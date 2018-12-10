@@ -52,6 +52,7 @@ Our final idea, and what we ended up rolling with was using a combination of mul
 ##### Main Script
 ###### Source Code
 https://github.com/2K2A/final_matlab/blob/master/main.m
+
 ###### What It Does
 The main script simply runs our test has_stop_sign on all images in both signs/true and signs/false where the folders contain images with stop signs and images without stop signs respectively.
 The results are saved in results which records true positives, false negatives, false positives, and true negatives in that order.
@@ -60,6 +61,7 @@ It also calculates an overall accuracy by taking the true positives + true negat
 ##### Has Stop Sign
 ###### Source Code
 https://github.com/2K2A/final_matlab/blob/master/hasStopSign.m
+
 ###### What It Does
 has_stop_sign takes an image as input and decides whether or not there is a stop sign in the image.
 The criteria are 3 tests each out of 100 (template matching, SIFT, and white pixel ratio)
@@ -70,6 +72,7 @@ If it scores at least 150/300 (50%) then we say there is a stop sign in the imag
 ##### Test 1: Template Matching
 ###### Source Code
 https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
+
 ###### How It's Done
 1) Find the largest red blob in the image by filtering out non-red objects and using bwlabel to find connected components and then sorting them by their area
 2) Put a bounding box around the red blob
@@ -77,11 +80,13 @@ https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
 4) Check how many pixels from the regular octagon and original image match and are different
 5) Take the number of different pixels / size of bounding box to get a percentage different
 6) After trial and error, it was found that any difference > 20% is very rarely a stop sign, so get a score based on how different it is out of the 20% and scale to be out of 100
+
 ###### Drawbacks
 * By only using the largest red blob, other objects like billboards, cars, etc. can get in the way. This can be circumvented by checking the largest n blobs, or all blobs greater than a given size
 * Rotated stop signs or strange perspectives do not match very well
 * "All Way" or "4 Way" sign additions on the bottom make it less accurate, but it is still usually pretty accurate
 * Other red objects touching the stop sign (e.g. a red flag hanging off of the stop sign becomes a part of the blob)
+
 ###### Results
 Efficiency: Roughly 0.2 seconds/image varying depending on image size
 
