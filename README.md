@@ -74,12 +74,12 @@ If it scores at least 150/300 (50%) then we say there is a stop sign in the imag
 https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
 
 ###### How It's Done
-1) Find the largest red blob in the image by filtering out non-red objects and using bwlabel to find connected components and then sorting them by their area
-2) Put a bounding box around the red blob
-3) Create a regular octagon and morph it to fit into the bounding box
-4) Check how many pixels from the regular octagon and original image match and are different
-5) Take the number of different pixels / size of bounding box to get a percentage different
-6) After trial and error, it was found that any difference > 20% is very rarely a stop sign, so get a score based on how different it is out of the 20% and scale to be out of 100
+1. Find the largest red blob in the image by filtering out non-red objects and using bwlabel to find connected components and then sorting them by their area
+2. Put a bounding box around the red blob
+3. Create a regular octagon and morph it to fit into the bounding box
+4. Check how many pixels from the regular octagon and original image match and are different
+5. Take the number of different pixels / size of bounding box to get a percentage different
+6. After trial and error, it was found that any difference > 20% is very rarely a stop sign, so get a score based on how different it is out of the 20% and scale to be out of 100
 
 ###### Drawbacks
 * By only using the largest red blob, other objects like billboards, cars, etc. can get in the way. This can be circumvented by checking the largest n blobs, or all blobs greater than a given size
@@ -107,9 +107,9 @@ Original With Bounding Box            |  Template on top of red blob
 https://github.com/2K2A/final_matlab/blob/master/featureMatch.m
 
 ###### How It's Done
-1) Step One
-2) Step Two
-3) ...
+1. Step One
+2. Step Two
+3. ...
 
 ###### Drawbacks
 * Wow this is an unfortunate drawback
@@ -130,9 +130,9 @@ Our Test Set: 40% accuracy (Low accuracy on this test, but much higher when the 
 https://github.com/2K2A/final_matlab/blob/master/detectStop.m
 
 ###### How It's Done
-1) Step One
-2) Step Two
-3) ...
+1. Step One
+2. Step Two
+3. ...
 
 ###### Drawbacks
 * Wow this is an unfortunate drawback
@@ -153,9 +153,9 @@ Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best indivi
 https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
 
 ###### How It's Done
-1) Step One
-2) Step Two
-3) ...
+1. Step One
+2. Step Two
+3. ...
 
 ###### Drawbacks
 * Wow this is an unfortunate drawback
