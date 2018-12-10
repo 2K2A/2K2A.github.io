@@ -148,6 +148,28 @@ Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best indivi
 |----------------|-----------------|-----------------|----------------|
 | 14             | 6               | 2               | 18             |
 
+##### Test 4: OCR (Character Recognition for 'STOP')
+###### Source Code
+https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
+
+###### How It's Done
+1) Step One
+2) Step Two
+3) ...
+
+###### Drawbacks
+* Wow this is an unfortunate drawback
+* Another terrible drawback
+* ...
+
+###### Results
+Efficiency: Roughly 0.6 seconds/image with higher variability than the other tests
+
+Our Test Set: 77.5% accuracy
+
+| True Positives | False Negaitves | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 11             | 9               | 0               | 20             |
 
 ## Results
 
