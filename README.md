@@ -80,7 +80,7 @@ https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
 * "All Way" or "4 Way" sign additions on the bottom make it less accurate, but it is still usually pretty accurate
 * Other red objects touching the stop sign (e.g. a red flag hanging off of the stop sign becomes a part of the blob)
 ##### Results
-
+![good_box](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/good_box.jpg)
 
 ## Results
 
