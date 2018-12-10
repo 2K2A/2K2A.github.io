@@ -64,23 +64,26 @@ The criteria are 3 tests each out of 100 (template matching, SIFT, and white pix
 The image can also earn bonus points if OCR picks up a word that resembles STOP, but since it does not tell us much if OCR fails and only if it succeeds, we do not consider it a standard test and only a bonus.
 If it scores at least 150/300 (50%) then we say there is a stop sign in the image, otherwise there is not.
 
-#### Test 1: Template Matching
-##### Source Code
+#### Tests
+##### Test 1: Template Matching
+###### Source Code
 https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
-##### How It's Done
+###### How It's Done
 1) Find the largest red blob in the image by filtering out non-red objects and using bwlabel to find connected components and then sorting them by their area
 2) Put a bounding box around the red blob
 3) Create a regular octagon and morph it to fit into the bounding box
 4) Check how many pixels from the regular octagon and original image match and are different
 5) Take the number of different pixels / size of bounding box to get a percentage different
 6) After trial and error, it was found that any difference > 20% is very rarely a stop sign, so get a score based on how different it is out of the 20% and scale to be out of 100
-##### Drawbacks
+###### Drawbacks
 * By only using the largest red blob, other objects like billboards, cars, etc. can get in the way. This can be circumvented by checking the largest n blobs, or all blobs greater than a given size
 * Rotated stop signs or strange perspectives do not match very well
 * "All Way" or "4 Way" sign additions on the bottom make it less accurate, but it is still usually pretty accurate
 * Other red objects touching the stop sign (e.g. a red flag hanging off of the stop sign becomes a part of the blob)
-##### Results
-
+###### Results
+Successful Example:
+![good_box](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/good_box.jpg)
+![good_template](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/template_matching/template_good_pair.jpg)
 
 ## Results
 
