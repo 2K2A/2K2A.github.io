@@ -2,6 +2,8 @@
 
 All source code can be found here: https://github.com/2K2A/final_matlab
 
+Our test set of 40 images (20 positive, 20 negative) pulled off of random websites: https://drive.google.com/file/d/1mwfzq5RjrL2qWeSt9AWhiR95ZiDzp_kz/view?usp=sharing
+
 ## Members
 
 Albert Latham (latham2@wisc.edu) NetID: latham2
