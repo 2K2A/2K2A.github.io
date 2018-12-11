@@ -2,7 +2,7 @@
 
 All source code can be found here: [https://github.com/2K2A/final_matlab](https://github.com/2K2A/final_matlab)
 
-Our test set of 40 images (20 positive, 20 negative) pulled off of random websites: https://drive.google.com/file/d/1mwfzq5RjrL2qWeSt9AWhiR95ZiDzp_kz/view?usp=sharing
+Our test set of 40 images (20 positive, 20 negative) pulled off of random websites: [https://drive.google.com/file/d/1mwfzq5RjrL2qWeSt9AWhiR95ZiDzp_kz/view?usp=sharing](https://drive.google.com/file/d/1mwfzq5RjrL2qWeSt9AWhiR95ZiDzp_kz/view?usp=sharing)
 
 ## Members
 
@@ -26,9 +26,9 @@ Guk Kim (gkim95@wisc.edu) NetID: gkim95
 
 ## Solution
 ### What is the current state-of-the-art?
-* https://ieeexplore.ieee.org/document/5716193
-* https://www.sciencedirect.com/science/article/pii/S0031320309002180
-* https://arxiv.org/abs/1805.04424
+* [https://ieeexplore.ieee.org/document/5716193](https://ieeexplore.ieee.org/document/5716193)
+* [https://www.sciencedirect.com/science/article/pii/S0031320309002180](https://www.sciencedirect.com/science/article/pii/S0031320309002180)
+* [https://arxiv.org/abs/1805.04424](https://arxiv.org/abs/1805.04424)
 
 In autonomous vehicles, the state of the art is using convolutional neural networks. The companies developing these algorithms have the luxury of loads of data, and their datasets continue to expand as they drive their autonomous vehicles around.
 
@@ -41,7 +41,7 @@ We have had numerous plans of attack throughout the process of building our solu
 Build and train a neural network to classify images as yes they have a stop sign or no they don't. We went away from this idea though due to the complexity of creating and training a neural network, as well as the fact that we would need a very large training set of images in order to get decent results.
 
 #### Midterm Idea
-At the midterm of the project we planned on following [this paper](https://ieeexplore.ieee.org/document/5716193) rather closely which just uses a simple hough transform to find lines around red objects and counts the number of lines. We did originally try to implement this, and can be found in the source code of our final project here: https://github.com/2K2A/final_matlab/blob/master/hasEightSides.m
+At the midterm of the project we planned on following [this paper](https://ieeexplore.ieee.org/document/5716193) rather closely which just uses a simple hough transform to find lines around red objects and counts the number of lines. We did originally try to implement this, and can be found in the source code of our final project here: [https://github.com/2K2A/final_matlab/blob/master/hasEightSides.m](https://github.com/2K2A/final_matlab/blob/master/hasEightSides.m)
 Despite much tinkering with parameters and filters and other methods, we were unable to get reliable results. Sometimes the same side would be recognized twice, sometimes sides wouldn't be recognized at all.
 
 #### Final Idea
@@ -51,7 +51,7 @@ Our final idea, and what we ended up rolling with was using a combination of mul
 #### Framework
 ##### Main Script
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/main.m
+[https://github.com/2K2A/final_matlab/blob/master/main.m](https://github.com/2K2A/final_matlab/blob/master/main.m)
 
 ###### What It Does
 The main script simply runs our test has_stop_sign on all images in both signs/true and signs/false where the folders contain images with stop signs and images without stop signs respectively.
@@ -60,7 +60,7 @@ It also calculates an overall accuracy by taking the true positives + true negat
 
 ##### Has Stop Sign
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/hasStopSign.m
+[https://github.com/2K2A/final_matlab/blob/master/hasStopSign.m](https://github.com/2K2A/final_matlab/blob/master/hasStopSign.m)
 
 ###### What It Does
 has_stop_sign takes an image as input and decides whether or not there is a stop sign in the image.
@@ -71,7 +71,7 @@ If it scores at least 150/300 (50%) then we say there is a stop sign in the imag
 #### Tests
 ##### Test 1: Template Matching
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m
+[https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m](https://github.com/2K2A/final_matlab/blob/master/matchesTemplate.m)
 
 ###### How It's Done
 1. Find the largest red blob in the image by filtering out non-red objects and using bwlabel to find connected components and then sorting them by their area
@@ -104,7 +104,7 @@ Original With Bounding Box            |  Template on top of red blob
 
 ##### Test 2: SIFT/Feature Matching
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/featureMatch.m
+[https://github.com/2K2A/final_matlab/blob/master/featureMatch.m](https://github.com/2K2A/final_matlab/blob/master/featureMatch.m)
 
 ###### How It's Done
 1. Step One
@@ -127,7 +127,7 @@ Our Test Set: 40% accuracy (Low accuracy on this test, but much higher when the 
 
 ##### Test 3: Ratio Scoring
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/detectStop.m
+[https://github.com/2K2A/final_matlab/blob/master/detectStop.m](https://github.com/2K2A/final_matlab/blob/master/detectStop.m)
 
 ###### How It's Done
 1. Step One
@@ -150,7 +150,7 @@ Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best indivi
 
 ##### Test 4: OCR (Character Recognition for 'STOP')
 ###### Source Code
-https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
+[https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m](https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m)
 
 ###### How It's Done
 1. Detecting text regions in an RGB image using MSER feature of Matlab by optimizing text detection using image features such as good color consistency and high contrast text
