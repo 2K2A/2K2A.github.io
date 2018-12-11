@@ -104,17 +104,45 @@ Original With Bounding Box            |  Template on top of red blob
 
 ##### Test 2: SIFT/Feature Matching
 ###### Source Code
+
 [https://github.com/2K2A/final_matlab/blob/master/featureMatch.m](https://github.com/2K2A/final_matlab/blob/master/featureMatch.m)
+[https://github.com/2K2A/final_matlab/blob/master/getStopSign.m](https://github.com/2K2A/final_matlab/blob/master/getStopSign.m)
 
 ###### How It's Done
-1. Step One
-2. Step Two
-3. ...
+
+Two images are processed in tandem, an image that we are trying to find a stop sign in, and a template stopsign image.
+
+![original image](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/stop_sign_template.jpg)
+![original image](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/img.jpg)
+
+1. `getStopSign.m` is called and takes an image as an argument and returns a cropped image of the largest red thing present.
+
+![cropped image](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/sign.jpg)
+
+2. Then, the images are blurred (de-noising).
+
+![blurred image](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/sign_blur.jpg)
+![blurred template](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/temp_blur.jpg)
+
+3. Edges are found using a Canny edge-finder.
+
+![edge image](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/sign_edge.jpg)
+![edge template](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/temp_edge.jpg)
+
+4. Features are found using the [VL_SIFT](http://www.vlfeat.org/matlab/vl_sift.html) algorithm and matched using [VL_UBCMATCH](http://www.vlfeat.org/matlab/vl_ubcmatch.html).
+
+![feature matches](https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/matched_features.jpg)
+
+5. To score the match, the scores returned by `VL_UBCMATCH` are treated and returned:
+
+```Matlab
+  score = 1/sqrt(sum(scores)/max(scores))*100;
+```
 
 ###### Drawbacks
-* Wow this is an unfortunate drawback
-* Another terrible drawback
-* ...
+* This method is slow (see Results section below).
+* This method *only* considers the largest red blob.
+* The features that are 'matched' aren't matching features.
 
 ###### Results
 Efficiency: Roughly 0.8 seconds/image varying depending on image size
