@@ -176,7 +176,9 @@ Our Test Set: 77.5% accuracy
 
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/1.png" alt="good_box" width="200"/>  |  <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/2.png" alt="good_template" width="200"/>
 :-------------------------:|:-------------------------:
+string = 'STOP'  |  string = '\[STOP]E'
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/3.png" alt="good_box" width="200"/>  |  <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/4.png" alt="good_template" width="200"/>
+string = '\[STOP-I  |  string = 'ISTOPI'
 
 ## Overall Results
 Efficiency: Roughly 1.5 seconds/image
