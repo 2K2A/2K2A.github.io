@@ -153,9 +153,10 @@ Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best indivi
 https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
 
 ###### How It's Done
-1. Step One
-2. Step Two
-3. ...
+1. Detecting text regions in an RGB image using MSER feature of Matlab by optimizing text detection using image features such as good color consistency and high contrast text 
+2. Removing the non-text regions in the image using geometric properties of text (eccentricity, euler, solidity, extent, etc.) after analysing MSER feature results 
+3. Using stroke width variation as an extra feature to remove non-text regions in the image. The stroke width of a MSER detected region containing human readable text has little variation over most part of the region. Hence, by applying threshold values the variation over an entire MSER detected region is reduced to a single metric. This is done for all MSER detected regions to further remove non-text regions from the image.
+4. Since the detection results at this point are individual text characters, the characters are merged into text lines for OCR recognition. This is done by constructing bounding boxes around individual text characters, expanding bounding boxes using regionprops and once the bounding boxes overlap neighboring bounding boxes, use overlapping ratio 
 
 ###### Drawbacks
 * Wow this is an unfortunate drawback
