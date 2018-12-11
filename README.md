@@ -1,6 +1,6 @@
 # Stop Sign Recognition
 
-All source code can be found here: https://github.com/2K2A/final_matlab
+All source code can be found here: [https://github.com/2K2A/final_matlab](https://github.com/2K2A/final_matlab)
 
 Our test set of 40 images (20 positive, 20 negative) pulled off of random websites: https://drive.google.com/file/d/1mwfzq5RjrL2qWeSt9AWhiR95ZiDzp_kz/view?usp=sharing
 
@@ -153,16 +153,16 @@ Our Test Set: 80% accuracy (High efficiency and accuracy, likely the best indivi
 https://github.com/2K2A/final_matlab/blob/master/hasWordStop.m
 
 ###### How It's Done
-1. Detecting text regions in an RGB image using MSER feature of Matlab by optimizing text detection using image features such as good color consistency and high contrast text 
-2. Removing the non-text regions in the image using geometric properties of text (eccentricity, euler, solidity, extent, etc.) after analysing MSER feature results 
+1. Detecting text regions in an RGB image using MSER feature of Matlab by optimizing text detection using image features such as good color consistency and high contrast text
+2. Removing the non-text regions in the image using geometric properties of text (eccentricity, euler, solidity, extent, etc.) after analysing MSER feature results
 3. Using stroke width variation as an extra feature to remove non-text regions in the image. The stroke width of a MSER detected region containing human readable text has little variation over most part of the region. Hence, by applying threshold values the variation over an entire MSER detected region is reduced to a single metric. This is done for all MSER detected regions to further remove non-text regions from the image.
 4. Since the detection results at this point are individual text characters, the characters are merged into text lines for OCR recognition. This is done by constructing bounding boxes around individual text characters and expanding bounding boxes using regionprops. Once the bounding boxes overlap the neighboring bounding boxes, by the use of overlapping ratio and using the graph function finds all the text regions connected by a non-zero overlap. Finally, all overlapping neighboring bounding boxes are merged into a single bounding box ready for OCR recognition.
 5. Simply using the OCR function helps to detect the text within each bounding box.
 
 ###### Drawbacks
-* Due to low image resolution OCR function is unable to detect words inside a text region clearly. This is because ideal use of OCR function without enhancements is for stationary text instead of detecting text in live images. 
+* Due to low image resolution OCR function is unable to detect words inside a text region clearly. This is because ideal use of OCR function without enhancements is for stationary text instead of detecting text in live images.
 * If a stop sign in an image is too close (making the word "STOP" heavily enlarged) or at too far a distance (making the word "STOP" minuscule) OCR function is unable to detect any text inside a clearly defined bounding box. To fix this, enhancements have to be made to the default OCR function to make it able to recognise texts at a variety of depths.
-* If a stop sign is dusty or pixelated in an image OCR will not be able to recognise text correctly. 
+* If a stop sign is dusty or pixelated in an image OCR will not be able to recognise text correctly.
 
 
 ###### Results
