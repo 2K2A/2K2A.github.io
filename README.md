@@ -158,14 +158,16 @@ Our Test Set: 40% accuracy (Low accuracy on this test, but much higher when the 
 [https://github.com/2K2A/final_matlab/blob/master/detectStop.m](https://github.com/2K2A/final_matlab/blob/master/detectStop.m)
 
 ###### How It's Done
-1. Step One
-2. Step Two
-3. ...
+1. Find the interesting red blob in the image (originally just the largest, later move onto a better heuristic. See alternative solution)
+2. Fill in the red blob
+3. Find the number of pixels that were filled in (what should be the letters "STOP")
+4. Calculate the ratio of inside pixels to the number of pixels in the blob
+5. Check how close that ratio is to an image we know to have a stop sign
 
 ###### Drawbacks
-* Wow this is an unfortunate drawback
-* Another terrible drawback
-* ...
+* It is dependent on us having a good ideal value
+* Originally, by looking at the largest red blob we missed the stop sign for things like cars and buildings or other random red objects
+* Low resolution images do not have enough inner pixels to fill in
 
 ###### Results
 Efficiency: Roughly 0.01 seconds/image varying depending on image size
@@ -211,12 +213,12 @@ string = '\[STOP-I'  |  string = 'ISTOPI'
 #### Alternative Solution
 When creating the slides and website for our implementation, we stumbled upon a new solution that provided higher accuracy on our test set and a significant improvement in efficiency.
 
-#### Source Code
+##### Source Code
 * Get the best red blob [https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m](https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m)
 * Get the template score on a given blob (template matching) [https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m](https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m)
 * Get the ratio score of a given (best) blob [https://github.com/2K2A/final_matlab/blob/master/ratioCheck.m](https://github.com/2K2A/final_matlab/blob/master/ratioCheck.m)
 
-#### What is it?
+##### What is it?
 We used a combination of Template Matching and our Ratio Checking
 1. Find all of the red connected components
 2. For every red connected components run the template matching algorithm to find the red blob that is the most octangular.
@@ -233,7 +235,15 @@ Our Test Set: 82.5% accuracy
 | 15             | 5               | 2               | 18             |
 
 ### Alternative Solution
+This solution tested multiple red blobs and defined the red blobs more closely, allowing for better matchings, and the ability to not worry about things like red flags or buildings in the background.
 
+Efficiency: Roughly 0.05 seconds/image (Allows for 20 FPS video)
+
+Our Test Set: 97.5% accuracy
+
+| True Positives | False Negatives | False Positives | True Negatives |
+|----------------|-----------------|-----------------|----------------|
+| 20             | 0               | 1               | 19             |
 
 ## Future
 * Run the recognition on a lower resolution dashcam video to detect stop signs live (Will also need to speed up tests or remove tests that do not perform as well)
