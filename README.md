@@ -113,7 +113,7 @@ Original With Bounding Box            |  Template on top of red blob
 Two images are processed in tandem, an image that we are trying to find a stop sign in, and a template stopsign image.
 
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/stop_sign_template.jpg" alt="good_box" width="200"/>
-<img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/img.jpg" width="200"/> 
+<img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/feature_matching/img.jpg" width="200"/>
 
 1. `getStopSign.m` is called and takes an image as an argument and returns a cropped image of the largest red thing present.
 
@@ -208,7 +208,22 @@ string = 'STOP'  |  string = '\[STOP]E'
 <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/3.png" alt="good_box" width="200"/>  |  <img src="https://raw.githubusercontent.com/2K2A/2K2A.github.io/master/images/ocr/4.png" alt="good_template" width="200"/>
 string = '\[STOP-I'  |  string = 'ISTOPI'
 
+#### Alternative Solution
+When creating the slides and website for our implementation, we stumbled upon a new solution that provided higher accuracy on our test set and a significant improvement in efficiency.
+
+#### Source Code
+* Get the best red blob [https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m](https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m)
+* Get the template score on a given blob (template matching) [https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m](https://github.com/2K2A/final_matlab/blob/master/getRedBlob.m)
+* Get the ratio score of a given (best) blob [https://github.com/2K2A/final_matlab/blob/master/ratioCheck.m](https://github.com/2K2A/final_matlab/blob/master/ratioCheck.m)
+
+#### What is it?
+We used a combination of Template Matching and our Ratio Checking
+1. Find all of the red connected components
+2. For every red connected components run the template matching algorithm to find the red blob that is the most octangular.
+3. Take that connected component and do the ratio test on that individual component
+
 ## Overall Results
+### Original Solution
 Efficiency: Roughly 1.5 seconds/image
 
 Our Test Set: 82.5% accuracy
@@ -216,6 +231,9 @@ Our Test Set: 82.5% accuracy
 | True Positives | False Negatives | False Positives | True Negatives |
 |----------------|-----------------|-----------------|----------------|
 | 15             | 5               | 2               | 18             |
+
+### Alternative Solution
+
 
 ## Future
 * Run the recognition on a lower resolution dashcam video to detect stop signs live (Will also need to speed up tests or remove tests that do not perform as well)
