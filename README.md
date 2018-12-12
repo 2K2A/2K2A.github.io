@@ -105,8 +105,8 @@ Original With Bounding Box            |  Template on top of red blob
 ##### Test 2: SIFT/Feature Matching
 ###### Source Code
 
-[https://github.com/2K2A/final_matlab/blob/master/featureMatch.m](https://github.com/2K2A/final_matlab/blob/master/featureMatch.m" alt="good_box" width="200"/>
-[https://github.com/2K2A/final_matlab/blob/master/getStopSign.m](https://github.com/2K2A/final_matlab/blob/master/getStopSign.m" alt="good_box" width="200"/>
+[https://github.com/2K2A/final_matlab/blob/master/featureMatch.m](https://github.com/2K2A/final_matlab/blob/master/featureMatch.m)
+[https://github.com/2K2A/final_matlab/blob/master/getStopSign.m](https://github.com/2K2A/final_matlab/blob/master/getStopSign.m)
 
 ###### How It's Done
 
